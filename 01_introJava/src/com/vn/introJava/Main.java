@@ -1,6 +1,6 @@
 package com.vn.introJava;
 
-import static com.vn.introJava.OrdenamientoArray.*;
+import static com.vn.introJava.funcionesbasicas.OrdenamientoArray.*;
 
 /**
  * Clase principal de proyecto Ejemplos java
