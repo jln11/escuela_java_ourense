@@ -1,6 +1,10 @@
 package com.vn.introJava;
 
 import static com.vn.introJava.funcionesbasicas.OrdenamientoArray.*;
+import com.vn.introJava.poo.Coche;
+import com.vn.introJava.poo.FabricaCoches;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Clase principal de proyecto Ejemplos java
@@ -15,14 +19,22 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        DatosBasicos.MostrarTiposDatos();
+        try {
+            //        DatosBasicos.MostrarTiposDatos();
 //        EstructurasControl.EjecutarBucles();
 //        EstructurasControl.EjecutarCondiciones();
 //        DatosBasicos.ProbarOperadores();
-      //  OrdenArray();
-       // OrdenArray2Arrays();
-       mostrarArrayGrande();
+//  OrdenArray();
+// OrdenArray2Arrays();
+//  mostrarArrayGrande();
+            Coche c = FabricaCoches.crear("Seat en main");
+            c.mostrarEstado();
+            c = FabricaCoches.crear(null);
+            c.mostrarEstado();
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 
-  
 }
