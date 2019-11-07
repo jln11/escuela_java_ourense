@@ -92,11 +92,15 @@ public class OperacionesConHerencia {
             new Coche ("Electrico"),
             subaru,
         };
+        
+        System.out.println("***LISTA DE VEHICULOS***");
         for (Vehiculo miVehiculo : misVehiculos) {
             System.out.println(" - " + miVehiculo.getTipo());
             miVehiculo.avanzar();
             miVehiculo.mostrarEstado();
+        
         }
+        System.out.println("***FIN DE LISTA***");
     }
 
 }

@@ -25,8 +25,16 @@ public class Tractor extends Vehiculo{
   }
     
     @Override
-     public  void mostrarEstado(){
-        System.out.println(" Soy un tractor ");
-     };
+    public  String toString(){
+        String texto = "" + tipo ; 
+        return texto;
+         
+     }
+
+  
+   
+
+
     
+     
 }

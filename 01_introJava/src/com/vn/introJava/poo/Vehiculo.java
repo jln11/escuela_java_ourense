@@ -31,6 +31,10 @@ public abstract class Vehiculo {
     
     public abstract void avanzar(); //declaracion
     
-   public abstract void mostrarEstado();
+
+    public void mostrarEstado() {
+        System.out.println(toString()); 
+    }
+
     
 }
