@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.vn.introJava.poo;
+package com.vn.introJava.poo.vehiculos;
+
+import com.vn.introJava.poo.interfaces.Desplazable;
 
 
 
@@ -13,7 +15,8 @@ package com.vn.introJava.poo;
  *
  * @author pc
  */
-public abstract class Vehiculo {
+public abstract class Vehiculo implements Desplazable
+{
     protected TipoVehiculo tipo;
 
     public TipoVehiculo getTipo() {

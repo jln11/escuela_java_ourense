@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.vn.introJava.poo;
+package com.vn.introJava.poo.vehiculos;
 
 /** Enumerado, por defecto empieza en cero
  * 

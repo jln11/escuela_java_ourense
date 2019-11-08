@@ -1,8 +1,8 @@
 package com.vn.introJava;
 
 import static com.vn.introJava.funcionesbasicas.OrdenamientoArray.*;
-import com.vn.introJava.poo.Coche;
-import com.vn.introJava.poo.FabricaCoches;
+import com.vn.introJava.poo.vehiculos.Coche;
+import com.vn.introJava.poo.vehiculos.FabricaCoches;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

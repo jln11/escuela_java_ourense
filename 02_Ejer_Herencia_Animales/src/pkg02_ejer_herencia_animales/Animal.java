@@ -11,24 +11,31 @@ package pkg02_ejer_herencia_animales;
  */
 public abstract class Animal {
     
+    /**
+     * Enumerado que indica el habitat del animal
+     */
     protected Habitat hab;
     
-private String nombre;
-private int edad;
-private float peso;
-
-  
-   
+    private String nombre;
     
+    private int edad;
+    
+    /**
+     * Peso que tiene precisión de gramos
+     */
+    private float peso;
+
+    
+    /**
+     * Constructor de Animal
+     * @param nombre
+     * @param edad 
+     */
     public Animal(String nombre, int edad) {
         this.nombre = nombre;
         this.peso = 15f;
         this.hab = hab.NO_DEFINIDO;
-        
-        if (edad <0)
-            this.edad = 0;
-        else 
-            this.edad = edad;       
+        this.edad = edad;       
     }
 
     
@@ -61,20 +68,23 @@ private float peso;
         this.peso = peso;
     }
 
-    
-   
-
+    /**
+     * Método que muestra la alimentación de un animal
+     * @param alimento 
+     */
     public void alimentar(String alimento){
-        System.out.println(this.nombre + "mastica y come " + alimento);
+        System.out.println(this.nombre + " mastica y come " + alimento);
     
     }
     
-   public static void mostrar(Animal animal){
-       System.out.println(animal.toString());
-   }
-
-
- 
+    /**
+     * Método estático para mostrar un animal
+     * @param animal 
+     */
+    public static void mostrar(Animal animal){
+        System.out.println(animal.toString());
+    }
+    
     
     public String toString(){
         return ("\nNombre: "+this.getNombre()+
@@ -83,6 +93,9 @@ private float peso;
                 "\nHabitat: "+this.getHab());
     }
     
+    /**
+     * Declaración del método abstracto para desplazar un animal
+     */
     public abstract void desplazar();
      
      

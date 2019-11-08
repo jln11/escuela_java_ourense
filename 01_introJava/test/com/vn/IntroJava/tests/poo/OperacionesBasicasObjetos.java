@@ -5,9 +5,9 @@
  */
 package com.vn.IntroJava.tests.poo;
 
-import com.vn.introJava.poo.Coche;
-import com.vn.introJava.poo.CocheRally;
-import com.vn.introJava.poo.FabricaCoches;
+import com.vn.introJava.poo.vehiculos.Coche;
+import com.vn.introJava.poo.vehiculos.CocheRally;
+import com.vn.introJava.poo.vehiculos.FabricaCoches;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.Before;
