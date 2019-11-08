@@ -8,6 +8,8 @@ package com.vn.IntroJava.tests.poo;
 import com.vn.introJava.poo.vehiculos.Coche;
 import com.vn.introJava.poo.vehiculos.CocheRally;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -50,5 +52,24 @@ public class ProbarColecciones {
     
     
     }
+      @Test
+    public void probarHashSet() {
+       HashSet<CocheRally> coch = new HashSet<CocheRally>();
+          coch.add(new CocheRally("Subaru Lunes"));
+          coch.add(new CocheRally("Toyota Martes"));
+          coch.add(new CocheRally("Hammer fin de"));
+          
+          for (CocheRally coche : coch) {
+              System.out.println(coche);
+          }
+    }
+          
+            @Test
+    public void probarMapSet() {
+        HashMap<Integer,CocheRally> co = new HashMap<Integer,CocheRally>();
+    }
+    }
     
-}
+    
+    
+
