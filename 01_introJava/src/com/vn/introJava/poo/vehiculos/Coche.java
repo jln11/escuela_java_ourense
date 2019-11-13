@@ -36,8 +36,19 @@ public class Coche extends Vehiculo {
             tipo= TipoVehiculo.TURISMO;
     }
 
+    @Override
+    public boolean equals(Object otroCoche) {
+        if (otroCoche instanceof Coche) {
+            Coche c= (Coche) otroCoche;
+            if (this.getMarca().equals(c.getMarca())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void arrancar() {
-        System.out.println(this.marca + "ha arrancado");
+        System.out.println(this.marca + " ha arrancado");
         arrancado = true;
     }
 
@@ -55,7 +66,7 @@ public class Coche extends Vehiculo {
             throw new IllegalArgumentException("La llave ha de valer de 1 a 4");
         }
         arrancado = posicionLlave == 4 /*? true : false*/;
-        System.out.println(this.marca + (arrancado ? "ha arrancado." : "fallo al arrancar"));
+        System.out.println(this.marca + (arrancado ? " ha arrancado." : " fallo al arrancar"));
         return arrancado;
     }
 
@@ -78,14 +89,14 @@ public class Coche extends Vehiculo {
         return /*this.*/ marca;
     }
 
-    public void setMarca(String nuevaMarca)
+    public void setMarca(String marca)
             //Avisamos a quien invoca este metodo
             //que podriamos lanzar la siguiente excepcion
             throws Exception {
         //Cuando existe una variable local con el mismo nombre, obliga a usar this para acceder a la propiedad
 //        o a la variable miembro con el mismo nombre
         if (marca != null && !"".equals(marca)) {
-            this.marca = nuevaMarca;
+            this.marca = marca;
         } else {
             throw new IllegalArgumentException("Debes asignar una marca");
         }
