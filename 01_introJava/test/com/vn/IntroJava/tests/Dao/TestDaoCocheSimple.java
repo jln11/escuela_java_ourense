@@ -45,6 +45,7 @@ public class TestDaoCocheSimple {
         Coche modificado = new Coche("Coche b reprogramado");
         daoCoche.modificar(1, modificado);
         assertEquals("Coche b reprogramado", daoCoche.obtenerPorIndice(1).getMarca());
+        assertEquals("Coche b reprogramado", daoCoche.obtenerPorMarca("Coche b reprogramado").getMarca());
         
         modificado=new Coche("Coche c");
         modificado.arrancar();
