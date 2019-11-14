@@ -36,7 +36,7 @@ public class Main {
 //        mostrarTiempo(timeIni, "Start en paralelo con arrays ha tardado: ");
 //        System.out.println(m1);
         //Ejecutar con sets
-        HilosSencillosSet hss = new HilosSencillosSet();
+     /*   HilosSencillosSet hss = new HilosSencillosSet();
         long timeIni = System.currentTimeMillis();
         try {
             hss.ejectuarHilosRunABenSerie(20);
@@ -50,7 +50,7 @@ public class Main {
         } catch (Exception ex) {
         }
         mostrarTiempo(timeIni, "Start en paralelo con arrays ha tardado: ");
-        System.out.println(m1);
+        System.out.println(m1);*/
 
     }
 

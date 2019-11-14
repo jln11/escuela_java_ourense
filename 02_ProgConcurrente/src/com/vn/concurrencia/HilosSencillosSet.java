@@ -8,6 +8,8 @@ package com.vn.concurrencia;
 import static com.vn.concurrencia.HilosSencillos.contcompartido;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  *
@@ -15,17 +17,27 @@ import java.util.Set;
  */
 public class HilosSencillosSet {
 
-    public  Set<Thread> HilosSet;
+    private  Set<Runnable> HilosSet;
+    private final long numHilos;
+    
+
+    public HilosSencillosSet(long numHilos) {
+        this.numHilos = numHilos;
+          HilosSet = new HashSet<>(); 
+    }
+    
+    
     
     
     class HiloA implements Runnable {
 
         @Override
         public void run() {
-            for (long i = 0; i < 50000000; i++) {
-                if (i % 1000000 == 0) {
+            for (long i = 0; i < numHilos; i++) {
+              
+                HilosSet.add(this);
                     System.out.println("Instruccion A " + i + " - contador = " + contcompartido);
-                }
+               
 
             }
         }
@@ -35,59 +47,46 @@ public class HilosSencillosSet {
 
         @Override
         public void run() {
-            for (long j = 0; j < 80000000; j++) {  //el contador principal, j, en variable local
-                if (j % 1000000 == 0) {
+            for (long j = 0; j < numHilos; j++) {  //el contador principal, j, en variable local
+              
+                HilosSet.add(this);
                     System.out.println("->Ins B: " + j + "c = " + contcompartido);
-                }
+             
 
             }
         }
     }
 
-    public void ejecutarHilosStartABenParalelo(int num) throws Exception {
+    public void ejecutarHilosStartABenParalelo() throws Exception {
 
         System.out.println("\n*****START******\n");
-       // Set<Thread> HilosSet = new HashSet();
-        for (int i = 0; i < num; i++) {
-            HiloA h = new HiloA();
-            Thread th = new Thread(h);
-            th.start();
-            HilosSet.add(th);
+           Set<Thread> setThreads = new HashSet<>();
+           
+        for (Runnable Hilo : HilosSet) {
+            setThreads.add(new Thread(Hilo));
         }
-        boolean vivo;
+     /*  boolean vivo;
         do {
             vivo=false;
-            for (Thread thread : HilosSet) {
+            for (Runnable thread : HilosSet) {
                 if (thread.isAlive()) {
                     vivo=true;
                 }
             }
-        } while (vivo);
+        } while (vivo);*/
         
         System.out.println("\n end*****START******\n");
 
     }
 
-    public void ejectuarHilosRunABenSerie(int num) throws Exception {
+    public void ejectuarHilosRunABenSerie() throws Exception {
 
         System.out.println("\n*****RUN******\n");
-        //Sin hilos, ejecutamos uno detras de otro
-       // Set<Thread> HilosSet = new HashSet();
-        for (int i = 0; i < num; i++) {
-            HiloA h = new HiloA();
-            Thread th = new Thread(h);
-            th.run();
-            HilosSet.add(th);
+    
+         for (Runnable Hilo : HilosSet) {
+            Hilo.run();
         }
-         boolean vivo;
-        do {
-            vivo=false;
-            for (Thread thread : HilosSet) {
-                if (thread.isAlive()) {
-                    vivo=true;
-                }
-            }
-        } while (vivo);
+     
         
         System.out.println("\n end*****RUN******\n");
         

@@ -24,7 +24,7 @@ public class HilosSencillos {
         this.hiloB2 = new HiloB();
     }
 
-    class HiloA implements Runnable {
+   public class HiloA implements Runnable {
 
         @Override
         public void run() {
@@ -38,7 +38,7 @@ public class HilosSencillos {
         }
     }
 
-    class HiloB implements Runnable {
+   public class HiloB implements Runnable {
 
         @Override
         public void run() {
