@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estructura Tipica HTML5</title>
+</head>
+<body>
+    <header>
+        <img src="imagenes/descarga.jpg" style="width: 50px; height: 50px;" alt="LOGO"/>
+        <h1>Titulo de la web</h1>
+
+        <nav>
+            <ul> <!-- Unordered List-->
+            <li><a href="01_estructura_html5.html">Menu principal</a></li>
+            <li><a href="02_ejemplo_css3.html">Ejemplos CSS3</a></li>
+            <li><a href="03_formularios.html">Formularios</a></li>
+            <li><a href="04_ejemplos_js.html">Webs dinamicos con js</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <nav>Otro Menu</nav>
+    <section>
+        <!-- los encabezados no se debenusar para el estilo-->
+        <h2>Encabezado nivel 2, como titulo secundario</h2>
+        <h3>Encabezado nivel 3, otros titulos</h3>
+        <article>
+            <h4>Aqui iria un articulo</h4>
+            Con el texto que sea bla bla bla
+        </article>
+        <article>
+                <h4>Aqui iria otro articulo</h4>
+                Con otro texto que sea bla bla bla
+                <section>Una parte del articulo</section>
+                <section>Otra parte del articulo</section>
+                <video src="imagenes/Ejemplo_de_video.mp4" controls></video>
+            </article>
+            <table>
+                <tr><!--TR para cada una de las filas--> 
+                    <th>Nombre</th> <!--TH para las cabeceras de las columnas--> 
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th>Contacto</th>
+                </tr>
+                <tr>
+                    <td>Ana</td><!--TD para cada una de las celdas de las columnas-->
+                    <td>Perez</td>
+                    <td>40</td>
+                    <td><a href="mailto://ana.perez@vn.com">Enviar email</a></td>
+                    
+                </tr>
+                <tr>
+                        <td>Juan</td><!--TD para cada una de las celdas de las columnas-->
+                        <td>Gomez</td>
+                        <td>41</td>
+                        <td><a href="tel://910010101">Llamar por Telefono</a></td>
+                        
+                    </tr>
+            </table>
+    </section>
+    <aside>
+        <p>Tipico submenu con enlaces de interes</p>
+        <ul>
+            <li><a href="https://www.w3schools.com/">www.w3schools.com/</a></li>
+            <li><a href="https://developer.mozilla.org/es/">Web mozilla/</a></li>
+        </ul>
+    </aside>
+    <footer>Pie de pagina
+        <nav><ul><li>Enlaces a RR.SS</li></ul></nav>
+        <address>Avenida Buenos Aires, 40. safe formacion</address>
+    </footer>
+</body>
+</html>
