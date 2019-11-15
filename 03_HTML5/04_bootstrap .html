@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estructura Tipica HTML5</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+    <header>
+        <img src="imagenes/descarga.jpg" style="width: 50px; height: 50px;" alt="LOGO" />
+        <h1>Titulo de la web</h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul>
+                <!-- Unordered List-->
+                <li class="nav-item"><a href="01_estructura_html5.html">Menu principal</a></li>
+                <li class="nav-item"><a href="02_ejemplo_css3.html">Ejemplos CSS3</a></li>
+                <li class="nav-item"><a href="03_formularios.html">Formularios</a></li>
+                <li class="nav-item"><a href="04_ejemplos_js.html">Webs dinamicos con js</a></li>
+                <li class="nav-item"><a href="04_bootstrap .html">bootstrap</a></li>
+                <li class="nav-item"><a href="05_ejemplos_js.html">Webs dinamicos con js</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <nav>Otro Menu</nav>
+    <section class="row">
+        <!-- los encabezados no se debenusar para el estilo-->
+        <h2 class="col-12">Encabezado nivel 2, como titulo secundario</h2>
+        <h3 class="col-12">Encabezado nivel 3, otros titulos</h3>
+        <article class="col-lg-4 col-md-6 col-sm-10">
+            <h3>Maquetados con media query CSS</h3>
+            <h4>Aqui iria un articulo</h4>
+            Con el texto que sea bla bla bla
+        </article>
+        <article  class="col-lg-4 col-md-6 col-sm-10">
+            <h4>Aqui iria otro articulo</h4>
+            Con otro texto que sea bla bla bla
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, ipsum! Mollitia explicabo non accusantium assumenda sapiente minus laboriosam deleniti deserunt aspernatur excepturi, dolores aliquam architecto facere alias, quaerat consequuntur accusamus.
+            <section>Una parte del articulo</section>
+            <section>Otra parte del articulo</section>
+            <video src="imagenes/Ejemplo_de_video.mp4" controls></video>
+        </article>
+        <article class="col-lg-4 col-md-6 col-sm-10" >
+                <h4>Aqui iria otro articulo</h4>
+                Con otro texto que sea bla bla bla
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, ipsum! Mollitia explicabo non accusantium assumenda sapiente minus laboriosam deleniti deserunt aspernatur excepturi, dolores aliquam architecto facere alias, quaerat consequuntur accusamus.
+                <section>Una parte del articulo</section>
+                <section>Otra parte del articulo</section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus velit provident molestiae quod suscipit tempore dolor. Nulla, hic dignissimos culpa necessitatibus fuga, voluptates maiores ut iure, consequatur sequi accusamus corrupti?
+            </article>
+        <table class="table table-striped table-bordered table-hover table-sm">
+            <thead class="thead-dark">
+            <tr>
+                <!--TR para cada una de las filas-->
+                <th>Nombre</th>
+                <!--TH para las cabeceras de las columnas-->
+                <th>Apellidos</th>
+                <th>Edad</th>
+                <th>Contacto</th>
+            </tr>
+        </thead>
+        <tbody class="tbody-light">
+            <tr>
+                <td>Ana</td>
+                <!--TD para cada una de las celdas de las columnas-->
+                <td>Perez</td>
+                <td>40</td>
+                <td><a href="mailto://ana.perez@vn.com">Enviar email</a></td>
+
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <!--TD para cada una de las celdas de las columnas-->
+                <td>Gomez</td>
+                <td>41</td>
+                <td><a href="tel://910010101">Llamar por Telefono</a></td>
+
+            </tr>
+            <tr>
+                    <td>Ana</td>
+                    <!--TD para cada una de las celdas de las columnas-->
+                    <td>Perez</td>
+                    <td>40</td>
+                    <td><a href="mailto://ana.perez@vn.com">Enviar email</a></td>
+    
+                </tr>
+                <tr>
+                    <td>Juan</td>
+                    <!--TD para cada una de las celdas de las columnas-->
+                    <td>Gomez</td>
+                    <td>41</td>
+                    <td><a href="tel://910010101">Llamar por Telefono</a></td>
+    
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <aside>
+        <p>Tipico submenu con enlaces de interes</p>
+        <ul>
+            <li><a href="https://www.w3schools.com/">www.w3schools.com/</a></li>
+            <li><a href="https://developer.mozilla.org/es/">Web mozilla/</a></li>
+        </ul>
+    </aside>
+    <footer>Pie de pagina
+        <nav>
+            <ul>
+                <li>Enlaces a RR.SS</li>
+            </ul>
+        </nav>
+        <address>Avenida Buenos Aires, 40. safe formacion</address>
+    </footer>
+</div>
+</body>
+
+</html>
