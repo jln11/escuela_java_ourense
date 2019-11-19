@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="componente_eventos">
+        <label>Evento con listener</label>
+        <input id="input_listo" size=100 />
+        <input id="btn_listo" type="button">
+        <div id="info_evento"></div>
+    </div>
+    <br />
+    <div id="componente_eventos2">
+        <label>Otros eventos con listener:</label>
+        <input id="input_dos" size=100 />
+        <input id="btn_dos" type="button">
+        <div id="info_evento_dos"></div>
+    </div>
+
+    <br />
+    <script>
+
+        var GestorEventos_1 = new GestorEventos(input_listo, btn_listo, div.funCallbkAlapulsar);
+        var GestorEventos_2 = new GestorEventos(input_dos, btn_dos,div.funCallbkAlapulsar_dos);
+
+        class GestorEventos {
+
+            constructor(input, button, div) {
+                this.input = input;
+                this.button = button;
+                this.div = div;
+
+                button.addEventListener("click", this.funCallbkAlapulsar);
+                button.addEventListener("click", this.funCallbkAlapulsar_dos);
+
+        /*         let input_listo = document.getElementById("input_listo");
+                let btn_listo = document.getElementById("btn_listo");
+                btn_listo.value = "Pulsa, listill@";
+                btn_listo.addEventListener("click", funCallbkAlapulsar);
+                btn_listo.addEventListener("click", funCallbkAlapulsar_dos);
+
+                let input_dos = document.getElementById("input_dos");
+                let btn_dos = document.getElementById("btn_dos");
+                btn_dos.value = "Pulsa si hay huevos";
+                btn_dos.addEventListener("click", funCallbkAlapulsar);
+                btn_dos.addEventListener("click", funCallbkAlapulsar_dos);*/
+            }
+            funCallbkAlapulsar(evento) {
+                this.input.value = "Tipo evento: " + evento.type;
+               // let info_evento = document.getElementById("info_evento");
+                this.button.value = "Puedes repetir";
+                this.div.innerHTML += "evento.currentTarget.id = " + evento.currentTarget.id;
+                this.div.className = "div-marco";
+                //btn_listo.removeEventListener("click", funCallbkAlapulsar); //forma para hacer que 
+                //el evento del boton solo funcione una vez
+            }
+            funCallbkAlapulsar_dos(evento) {
+
+                document.getElementsByTagName("body")[0].className = "fondo-body";
+            }
+
+        }
+
+    </script>
+    <style>
+        .div-marco {
+            border: blue solid;
+            background-color: lightgrey;
+        }
+
+        .fondo-body {
+            background-color: lightgreen;
+        }
+    </style>
+</body>
+
+</html>
