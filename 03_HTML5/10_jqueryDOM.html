@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manejando el DOM con Jquery</title>
+    <style>
+        /* selector universal{ porpiedad_1=...;propiedad_2=...;}*/
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+       
+    </style>
+    <link rel="stylesheet" href="estilos/02-ejemplo_css3.css"/>
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/descarga.jpg" style="width: 50px; height: 50px;" alt="LOGO" />
+        <h1 class="titulo">Manejando el DOM con Jquery</h1>
+
+        <nav>
+            <ul>
+                <!-- Unordered List-->
+                <li class="elemento-menu"><id="enlace-menu" name="enlace-menu" a href="01_estructura_html5.html">Menu principal</a></li>
+                <li class="elemento-menu"><id="enlace-css" a href="02_ejemplo_css3.html">Ejemplos CSS3</a></li>
+                <li class="elemento-menu"><a href="03_formularios.html">Formularios</a></li>
+                <li class="elemento-menu"><a href="04_ejemplos_js.html">Webs dinamicos con js</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <nav id="otro_menu">otro Menu</nav>
+    <section>
+        <!-- los encabezados no se debenusar para el estilo-->
+        <h2>Encabezado nivel 2, como titulo secundario</h2>
+        <h3>Encabezado nivel 3, otros titulos</h3>
+        <article class="articulo marco-colocado">
+            <h4 class="azul-chillon">Aqui iria un articulo.</h4>
+            Con el texto que sea bla bla bla Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, aperiam quod vitae cum dolores ducimus itaque voluptates iure nisi expedita ipsum minima at aut tempora quo odit? Incidunt, quis illo.
+        </article>
+        <article class="articulo marco-colocado">
+            <h4>Aqui iria otro articulo</h4>
+            Con otro texto que sea bla bla bla Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquam repellat est nam. Amet labore corrupti alias perferendis. Nihil excepturi omnis quibusdam minima laboriosam sunt impedit voluptas officiis doloribus dolor!
+            <section class="azul-chillon marco-colocado">Una parte del articulo Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae fuga veniam soluta ipsa cum in consequatur vero aperiam porro velit incidunt facilis fugiat, deserunt impedit! Veniam ut consectetur voluptatibus recusandae.</section>
+            <section class="marco-colocado">Otra parte del articulo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. In at possimus ex qui, corrupti porro, ducimus molestias accusamus quasi quis excepturi iste mollitia voluptatem labore cum minus ipsa optio suscipit.</section>
+            <video src="imagenes/Ejemplo_de_video.mp4" controls></video>
+        </article>
+        <table>
+            <tr>
+                <!--TR para cada una de las filas-->
+                <th class="azul-chillon">Nombre</th>
+                <!--TH para las cabeceras de las columnas-->
+                <th>Apellidos</th>
+                <th>Edad</th>
+                <th>Contacto</th>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <!--TD para cada una de las celdas de las columnas-->
+                <td>Perez</td>
+                <td>40</td>
+                <td><a href="mailto://ana.perez@vn.com">Enviar email</a></td>
+
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <!--TD para cada una de las celdas de las columnas-->
+                <td>Gomez</td>
+                <td>41</td>
+                <td><a href="tel://910010101">Llamar por Telefono</a></td>
+
+            </tr>
+        </table>
+        <article class="articulo marco-colocado">
+            <h4>Aqui iria otro articulo</h4>
+            Con otro texto que sea bla bla bla Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquam repellat est nam. Amet labore corrupti alias perferendis. Nihil excepturi omnis quibusdam minima laboriosam sunt impedit voluptas officiis doloribus dolor
+        </article>
+    </section>
+    <aside>
+        <p>Tipico submenu con enlaces de interes</p>
+        <ul>
+            <li><a href="https://www.w3schools.com/">www.w3schools.com/</a></li>
+            <li><a href="https://developer.mozilla.org/es/">Web mozilla/</a></li>
+        </ul>
+    </aside>
+    <footer class="articulo">Pie de pagina
+        <nav>
+            <ul>
+                <li>Enlaces a RR.SS</li>
+            </ul>
+        </nav>
+        <address>Avenida Buenos Aires, 40. safe formacion</address>
+    </footer>
+<script src="jsJQuery/jquery-3.4.1.js"></script>
+<script src="jsJQuery/10_jqueryDOM.js"></script>
+</body>
+
+</html>

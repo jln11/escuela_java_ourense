@@ -74,6 +74,12 @@
             width: 300px;
         }
 
+        .enlace-articulo {
+            padding: 1em;
+            margin: 1em;
+            color: black;
+            background-color: antiquewhite;
+        }
 
         /*Media queries,condiciones para seleccionar que estilos se aplican a que dispositivos*/
         .articulo {border: black solid;}
