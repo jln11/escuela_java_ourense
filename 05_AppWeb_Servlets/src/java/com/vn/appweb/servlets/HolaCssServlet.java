@@ -24,7 +24,7 @@ public class HolaCssServlet extends HttpServlet{
       {
           salida.println(" .color-rojo{background-color:red;}");
           for (int i = 0; i < 10; i++) {
-              salida.print(" .iterar" +i +"{font-size:" + i*10 + "}");
+              salida.print(" .iterar" +i +"{font-size: " + i*10 + "}");
           }
       }
       }
