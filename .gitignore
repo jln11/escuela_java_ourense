@@ -45,3 +45,4 @@ nbdist/
 ./05_AppWeb_Servlets/lib/db-derby-10.14.2.0-bin/demo
 /07_MVN_ModeloUsuario/target/
 /.metadata/
+/derby_bbdd
