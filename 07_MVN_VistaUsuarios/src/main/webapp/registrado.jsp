@@ -7,8 +7,8 @@
 <%@page import="com.vn.appusuarios.modelo.logica.ServicioUsuarios"%>
 <%@page import="com.vn.appusuarios.modelo.Usuario"%>
 <%
-	ServicioUsuarios servicioU = (ServicioUsuarios) request.getAttribute("servicioUsu");
-Usuario usuario = (Usuario) session.getAttribute("usuario");
+	//ServicioUsuarios servicioU = (ServicioUsuarios) request.getAttribute("servicioUsu");
+    //Usuario usuario = (Usuario) session.getAttribute("usuario");
 %>
 <html>
  <%= head() %>
