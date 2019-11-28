@@ -9,12 +9,30 @@
     <body>
 	
         <h1>Formulario JSP de Login</h1> 
-        <form name="form1">
+<!--         <form name="form1"> -->
+<!--             <table border="1"> -->
+<!--                <tr><td>Email</td><td> </td></tr>  -->
+<!--                 <tr><td>Contrase√±a</td><td>  </td></tr>  -->
+<!--             </table> -->
+<!--             <input type="submit" value=""/> -->
+<!--         </form> -->
+   <form name="form1" action="usuarios.do" method="GET">
+
             <table border="1">
-               <tr><td>Email</td><td> </td></tr> 
-                <tr><td>Contrase√±a</td><td>  </td></tr> 
+               <tr><td>Email</td><td>
+                        <input type="email" name="email" id="email" value=""
+                               placeholder="Introduzca email"
+                               required="required"
+                               pattern="^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$"/>  </td></tr> 
+                <tr><td>ContraseÒa</td><td>
+                    <input type="password" name="password" id="password" value=""
+                           placeholder="Introduzca una contraseÒa"
+                           minlength="4"
+                           required="required"/>  </td></tr> 
             </table>
-            <input type="submit" value=""/>
+            <input type="submit" value="Login"/>
         </form>
+
+
     </body>
 </html>

@@ -3,6 +3,7 @@
     Created on : 21-feb-2019, 23:21:10
     Author     : IEUser
 --%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="head.jsp" %>
 <%@page import="com.vn.appusuarios.modelo.logica.ServicioUsuarios"%>
 <%@page import="com.vn.appusuarios.modelo.Usuario"%>
@@ -23,9 +24,10 @@
 <!-- 	</h2> -->
 	<h2 style="color: green">
 		ID :
-		<%= usuario.getId()%>
+		<c:out value="$ {usuario.id}"/>
 		<br> Nombre :
-		<%= usuario.getNombre()%>
+		<c:out value="$ {usuario.nombre}"/>
+	
 	</h2>
 
 
